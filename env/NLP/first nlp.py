@@ -47,7 +47,43 @@ filtered = [w for w in tokens if w not in stopwords.words('english')]
 stemmer = PorterStemmer()
 stemmed_words = [stemmer.stem(word) for word in filtered]
 
+"""PorterStemmer()
+NLTK को एक Stemming algorithm हो। यो अंग्रेजी भाषामा प्रयोग गरिन्छ।
+
+[stemmer.stem(word) for word in filtered]
+यो एक list comprehension हो, जसले filtered सूचीमा रहेका प्रत्येक शब्दलाई stemming गरेर नयाँ stemmed नामको सूची बनाउँछ।
+
+Stemming ले text को समान अर्थ भएका शब्दलाई एउटै group मा राख्न मद्दत गर्छ।
+जस्तै:
+
+playing → play
+
+played → play
+
+runs → run
+
+running → run
+
+Machine learning मा vocabulary घटाएर computation time कम गर्न उपयोगी हुन्छ।
+
+Stemming कहिलेकाहीं गलत base form दिन सक्छ।
+जस्तै:
+
+"studies" → "studi"
+
+"better" → "better" (यसो हुन सक्छ, किनभने stemming dictionary based होइन)
+
+त्यसैले अधिक precise result चाहिएको खण्डमा Lemmatization प्रयोग गरिन्छ।"""
+
+
+
 # अन्तिम नतिजा प्रिन्ट गर्ने
 print("Tokenized:", tokens)           # सबै टोकनहरू देखाउने
 print("Filtered:", filtered)          # Stopwords हटाइ सकेपछिको शब्दहरू
 print("Stemmed:", stemmed_words)      # Root मा झारिएका शब्दहरू
+
+
+"""[nltk_data]   Package stopwords is already up-to-date!
+Tokenized: ['natural', 'language', 'processing', 'is', 'very', 'exciting', 'and', 'powerful', '!']
+Filtered: ['natural', 'language', 'processing', 'exciting', 'powerful', '!']
+Stemmed: ['natur', 'languag', 'process', 'excit', 'power', '!']"""
