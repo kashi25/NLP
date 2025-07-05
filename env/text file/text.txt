@@ -1,0 +1,45 @@
+ Create a .gitignore file at the root level of your project (where env/ and NLP/ folders are located)
+ Put this content inside the .gitignore file:
+
+# Ignore virtual environment folder
+env/yovitra kun kun script hatau na tyasko name
+
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore logs
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# VSCode and PyCharm folders
+.vscode/
+.idea/
+
+
+tep 2: If you already added env/ before creating .gitignore
+You’ll need to remove it from tracking manually:
+
+bash
+Copy
+Edit
+git rm -r --cached env/
+
+Then commit the change:
+
+bash
+Copy
+Edit
+git commit -m "Remove env folder from tracking"
+
+Step 3: Push your project
+bash
+Copy
+Edit
+git add .
+git commit -m "Initial project commit"
+git push origin main
