@@ -3,12 +3,10 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
+
 # आवश्यक resource हरू डाउनलोड गर्ने (एकपटक मात्र चलाउनु पर्छ)
 nltk.download('punkt')       # Tokenization को लागि
 nltk.download('punkt_tab')   # भाषा अनुसार tokenizer चलाउनका लागि
-nltk.download('stopwords')   # Stopwords हरू हटाउन
-
-# प्रयोग गर्न लागेको text
 nltk.download('stopwords')   # Stopwords हरू हटाउन
 
 # प्रयोग गर्न लागेको text
