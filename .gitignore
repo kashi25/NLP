@@ -1,0 +1,17 @@
+# Ignore virtual environment folder
+env/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore logs
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# VSCode and PyCharm folders
+.vscode/
+.idea/
